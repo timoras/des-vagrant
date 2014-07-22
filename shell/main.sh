@@ -8,13 +8,9 @@ mkdir -p $PUPPET_DIR
 
 GIT=/usr/bin/git
 
-if [ ! -x $GIT ]; then
-    apt-get -q -y update
-    apt-get -q -y install git gitk
-fi
-if [ ! -x /sbin/mkfs ]; then
-    apt-get -q -y install ruby-dev
-fi
+apt-get -q -y update
+apt-get -q -y install git ruby-dev
+
 
 cp /vagrant/puppet/Puppetfile $PUPPET_DIR
 if [ "$(gem search -i librarian-puppet)" = "false" ]; then
