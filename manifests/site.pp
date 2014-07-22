@@ -3,9 +3,7 @@ class { 'postgresql::server':
   listen_addresses           => '*',
   manage_firewall            => true,
   postgres_password          => 'TPSrep0rt!',
-}
-
-
+} ->
 postgresql::server::db { 'des_db':
   user     => 'desuser',
   password => 'desuser'
