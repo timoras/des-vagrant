@@ -4,7 +4,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
+  config.vm.box = "puppetlabs/ubuntu-14.04-32-puppet"
   config.vm.network "private_network", ip: "172.17.33.10"
 
   # Create a public network, which generally matched to bridged network.
